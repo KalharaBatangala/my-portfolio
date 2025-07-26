@@ -38,8 +38,8 @@
 // export default HeroSection;
 
 import React, { useState } from 'react';
-import profilePic from './assets/profile-pic.jpg';
-import bannerPic from './assets/Portfolio-banner.png';
+import profilePic from '../assets/profile-pic.jpg';
+import bannerPic from '../assets/Portfolio-banner.png';
 
 const HeroSection = () => {
   const [isZoomed, setIsZoomed] = useState(false);

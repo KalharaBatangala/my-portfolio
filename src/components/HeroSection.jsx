@@ -1,6 +1,9 @@
+
 // import React, { useState } from 'react';
 // import profilePic from '../assets/profile-pic.jpg';
 // import bannerPic from '../assets/Portfolio-banner.png';
+// import EnthusiasmCard from './EnthusiasmCard';
+// import AboutCard from './AboutCard';
 
 // const HeroSection = () => {
 //   const [isZoomed, setIsZoomed] = useState(false);
@@ -15,17 +18,8 @@
 //     }, 300); // Match animation duration
 //   };
 
-//   // Interests for the Strong Enthusiasm card
-//   const interests = [
-//     'DevOps',
-//     'System Administration',
-//     'Deep Learning for medical imaging',
-//     'Signal Processing',
-    
-//   ];
-
 //   return (
-//     <div className="relative w-full h-[650px] bg-transparent">
+//     <div className="relative w-full min-h-[550px] bg-transparent">
 //       {/* Banner Wrapper */}
 //       <div className="mt-8 pt-12 px-12 shadow-md">
 //         {/* Banner with Background Image */}
@@ -57,17 +51,10 @@
 //           Building the Future, One Project at a Time
 //         </p>
 //       </div>
-//       {/* Strong Enthusiasm Card */}
-//       <div className="absolute top-[450px] right-[5%] sm:right-[10%] md:right-[15%] bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
-//         <h3 className="text-xl font-bold text-gray-800 mb-4">Strong Enthusiasm</h3>
-//         <ul className="space-y-2">
-//           {interests.map((interest, index) => (
-//             <li key={index} className="flex items-start">
-//               <span className="text-secondary mr-2">•</span>
-//               <span className="text-gray-800">{interest}</span>
-//             </li>
-//           ))}
-//         </ul>
+//       {/* Cards Container for About and Enthusiasm */}
+//       <div className="relative mt-[150px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-80">
+//         <AboutCard />
+//         <EnthusiasmCard />
 //       </div>
 //       {/* Zoomed Image Modal */}
 //       {isZoomed && (
@@ -79,7 +66,7 @@
 //             src={profilePic}
 //             alt="Zoomed Profile"
 //             className={`max-w-[80%] max-h-[80%] ${isClosing ? 'animate-zoom-out' : 'animate-zoom-in'}`}
-//             onClick={(e) => e.stopPropagation()} // Prevent closing on image click
+//             onClick={(e) => e.stopPropagation()}
 //           />
 //         </div>
 //       )}
@@ -92,6 +79,7 @@
 import React, { useState } from 'react';
 import profilePic from '../assets/profile-pic.jpg';
 import bannerPic from '../assets/Portfolio-banner.png';
+import EnthusiasmCard from './EnthusiasmCard';
 
 const HeroSection = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -105,13 +93,6 @@ const HeroSection = () => {
       setIsClosing(false);
     }, 300); // Match animation duration
   };
-
-  // Interests for the Strong Enthusiasm card
-  const interests = [
-    'DevOps',
-    'System Administration',
-    'Deep Learning for medical imaging',
-  ];
 
   return (
     <div className="relative w-full min-h-[550px] bg-transparent">
@@ -146,19 +127,20 @@ const HeroSection = () => {
           Building the Future, One Project at a Time
         </p>
       </div>
-      
-      {/* Strong Enthusiasm Card Container */}
-      <div className="relative mt-[100px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="ml-auto max-w-sm w-full bg-white p-6 rounded-lg shadow-xl">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Strong Enthusiasm</h3>
-          <ul className="space-y-2">
-            {interests.map((interest, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-secondary mr-2">•</span>
-                <span className="text-gray-800">{interest}</span>
-              </li>
-            ))}
-          </ul>
+      {/* Content Container for About and Enthusiasm */}
+      <div className="relative mt-[150px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
+        {/* About Section */}
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">About Me</h3>
+          <p className="text-gray-600 text-sm">
+            I'm Kalhara Batangala, an aspiring engineer passionate about leveraging technology to solve real-world problems. With a keen interest in DevOps, system administration, and deep learning for medical imaging, I strive to build innovative solutions that drive progress and impact lives positively.
+          </p>
+        </div>
+        {/* Vertical Separator */}
+        <div className="hidden md:block border-l border-secondary h-auto self-stretch"></div>
+        {/* Enthusiasm Card */}
+        <div className="max-w-sm w-full md:ml-auto">
+          <EnthusiasmCard />
         </div>
       </div>
       {/* Zoomed Image Modal */}

@@ -7,18 +7,16 @@ const EnthusiasmCard = () => {
     'DevOps',
     'System Administration',
     'Deep Learning for medical imaging',
-    'Signal Processing',
-    'Hello World'
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
-      <h3 className="text-xl font-bold text-gray-800 mb-4">Strong Enthusiasm</h3>
+    <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full font-poppins">
+      <h3 className="text-2xl font-bold text-gray-800 mb-4">Strong Enthusiasm</h3>
       <ul className="space-y-2">
         {interests.map((interest, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-secondary mr-2">•</span>
-            <span className="text-gray-800">{interest}</span>
+          <li key={index} className="flex items-center">
+            <span className="text-secondary mr-2 text-3xl">•</span> {/* Larger bullet point for visibility */}
+            <span className="text-lg text-gray-800">{interest}</span> {/* Larger text for clarity */}
           </li>
         ))}
       </ul>

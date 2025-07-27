@@ -37,3 +37,6 @@
   animation: zoomOut 0.3s ease-out forwards;
 }
 
+body {
+  @apply bg-white dark:bg-gray-900; /* Default light background, dark mode gray */
+}

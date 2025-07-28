@@ -20,7 +20,7 @@
 import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
+import HeroSection from './pages/HeroSection';
 import Footer from './components/Footer';
 
 const App = () => {

@@ -18,13 +18,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#231F20] dark:bg-gray-900 shadow-md z-50 font-poppins">
+    <nav className="fixed top-0 left-0 w-full bg-primary dark:bg-gray-900 shadow-md z-50 font-poppins border-b border-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-[#F47B20] dark:text-[#F47B20]">
-              KB
+            <a href="/" className="text-2xl font-bold text-secondary">
+              Kalhara Batangala
             </a>
           </div>
 
@@ -34,14 +34,14 @@ const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-white dark:text-gray-100 hover:text-[#F47B20] dark:hover:text-[#F47B20] transition-colors duration-300"
+                className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary transition-colors duration-300"
               >
                 {item.label}
               </a>
             ))}
             <button
               onClick={toggleTheme}
-              className="text-white dark:text-gray-100 hover:text-[#F47B20] dark:hover:text-[#F47B20] transition-colors duration-300"
+              className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary transition-colors duration-300"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? (
@@ -82,7 +82,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-white dark:text-gray-100 hover:text-[#F47B20] dark:hover:text-[#F47B20] focus:outline-none"
+              className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary focus:outline-none"
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -96,13 +96,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#231F20] dark:bg-gray-900 border-t border-gray-700 dark:border-gray-800">
+        <div className="md:hidden bg-primary dark:bg-gray-900 border-t border-gray-600 dark:border-gray-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-3 py-2 text-white dark:text-gray-100 hover:text-[#F47B20] dark:hover:text-[#F47B20] hover:bg-gray-800 dark:hover:bg-gray-700 rounded-md transition-colors duration-300"
+                className="block px-3 py-2 text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
                 onClick={toggleMenu}
               >
                 {item.label}
@@ -113,7 +113,7 @@ const Navbar = () => {
                 toggleTheme();
                 toggleMenu();
               }}
-              className="flex w-full px-3 py-2 text-white dark:text-gray-100 hover:text-[#F47B20] dark:hover:text-[#F47B20] hover:bg-gray-800 dark:hover:bg-gray-700 rounded-md transition-colors duration-300"
+              className="flex w-full px-3 py-2 text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? (

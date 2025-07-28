@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import profilePic from '../assets/profile-pic.jpg';
 import bannerPic from '../assets/Portfolio-banner.png';
 import EnthusiasmCard from '../components/EnthusiasmCard';
 
-const HeroSection = () => {
+const Home = () => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -18,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-full min-h-[550px] bg-transparent dark:bg-gray-900 font-poppins">
+    <div className="relative w-full min-h-screen bg-transparent dark:bg-gray-900 font-poppins">
       {/* Banner Wrapper */}
       <div className="mt-16 pt-12 px-12">
         {/* Banner with Background Image */}
@@ -90,4 +89,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Home;

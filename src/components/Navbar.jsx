@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { ThemeContext } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
+import logo from '../assets/falcon.png';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +35,11 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <motion.div whileHover="hover" whileTap="tap" variants={linkVariants}>
               <Link to="/" className="text-2xl font-bold text-secondary">
-                Kalhara Batangala
+                <img
+                  src={logo}
+                  alt="Kalhara Batangala Logo"
+                  className="h-12 w-auto text-secondary"
+                />
               </Link>
             </motion.div>
           </div>

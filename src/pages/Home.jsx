@@ -3,10 +3,13 @@ import profilePic from '../assets/profile-pic.jpg';
 import bannerPic from '../assets/Portfolio-banner.png';
 import EnthusiasmCard from '../components/EnthusiasmCard';
 
+
 const Home = () => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
+
+  
   // Handle modal close with zoom-out animation
   const handleClose = () => {
     setIsClosing(true);

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import logo from '../assets/falcon.png';
 
 const Footer = () => {
   const linkVariants = {
@@ -17,7 +18,11 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <motion.div whileHover="hover" whileTap="tap" variants={linkVariants}>
               <Link to="/" className="text-2xl font-bold text-secondary mb-4">
-                KB
+                <img
+                  src={logo}
+                  alt="Kalhara Batangala Logo"
+                  className="h-12 w-auto text-secondary"
+                />
               </Link>
             </motion.div>
             <p className="text-text-tertiary text-sm text-center md:text-left">
